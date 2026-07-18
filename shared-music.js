@@ -1,11 +1,11 @@
 /* ══════════════════════════════════════════════════════════════
    SHARED-MUSIC.JS
    Reads song path from sessionStorage and plays it on
-   friend.html and love.html at medium volume (0.35).
+   friend.html and love.html at device volume (1.0).
    Shows a floating music toggle widget.
 ══════════════════════════════════════════════════════════════ */
 (function SharedMusic() {
-  const VOLUME = 0.35;
+  const VOLUME = 1.0;
 
   window.addEventListener('DOMContentLoaded', () => {
     const songSrc  = sessionStorage.getItem('selectedSong')     || '';

@@ -128,10 +128,9 @@ bdaySubmit.addEventListener('click', () => {
   const norm = `${d.padStart(2, '0')}/${m.padStart(2, '0')}/${y}`;
   if (norm === CORRECT_BIRTHDAY) {
     bdayOverlay.classList.add('exit');
+    sessionStorage.setItem('birthdayPassed', 'true');
     setTimeout(() => {
-      bdayOverlay.classList.remove('active', 'exit');
-      bdayOverlay.style.display = 'none';
-      openMusicPopup();
+      window.location.hash = 'song';
     }, 500);
   } else {
     showBdayError();
@@ -172,9 +171,7 @@ musicConfirm.addEventListener('click', () => {
   sessionStorage.setItem('selectedSongName', SONG_LABELS[val] || val);
   musicOverlay.classList.add('exit');
   setTimeout(() => {
-    musicOverlay.classList.remove('active', 'exit');
-    musicOverlay.style.display = 'none';
-    showChoiceScreen();
+    window.location.hash = 'choice';
   }, 500);
 });
 
@@ -240,4 +237,51 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = href;
     }, 500);
   }
+});
+
+// ─────────────────────────────────────────────────────────────
+// NAVIGATION STATE / ROUTING (Hash Based)
+// ─────────────────────────────────────────────────────────────
+function handleNavigationState() {
+  const hash = window.location.hash;
+  
+  // Hide all screens to reset before matching
+  bdayOverlay.classList.remove('active', 'exit');
+  bdayOverlay.style.display = '';
+  musicOverlay.classList.remove('active', 'exit');
+  musicOverlay.style.display = '';
+  choiceScreen.classList.add('hidden');
+  choiceScreen.classList.remove('visible');
+
+  // Hide proposal magic inputs as well
+  const magicWrap = document.getElementById('proposal-magic-wrap');
+  if (magicWrap) magicWrap.classList.add('hidden');
+  const magicInput = document.getElementById('magic-input');
+  if (magicInput) magicInput.value = '';
+
+  if (hash === '#choice') {
+    // If she hasn't unlocked the birthday, force back to birthday
+    if (sessionStorage.getItem('birthdayPassed') !== 'true') {
+      window.location.hash = 'birthday';
+      return;
+    }
+    showChoiceScreen();
+  } else if (hash === '#song') {
+    // If she hasn't unlocked the birthday, force back to birthday
+    if (sessionStorage.getItem('birthdayPassed') !== 'true') {
+      window.location.hash = 'birthday';
+      return;
+    }
+    openMusicPopup();
+  } else {
+    // Default to birthday gate (either #birthday or empty)
+    bdayOverlay.classList.add('active');
+  }
+}
+
+// Bind navigation listeners
+window.addEventListener('hashchange', handleNavigationState);
+document.addEventListener('DOMContentLoaded', () => {
+  // Check the initial state on load
+  handleNavigationState();
 });
