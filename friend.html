@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Best Friend 🖤</title>
+  <meta name="description" content="A special surprise page created with love for my best friend from Assam 🖤" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-heart">🖤</div>
+      <p class="loader-text">Opening something special for you...</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main" class="hidden">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-in">
+          <img src="gifs/san-valentin.gif" class="badge-gif" alt="heart gif" />
+          <span>A Special Surprise</span>
+        </div>
+        <h1 class="hero-title animate-slide-up">
+          Hey, <span class="gradient-text">Best Friend</span>
+        </h1>
+        <p class="hero-subtitle animate-slide-up delay-1">
+          This page was made just for <em>you</em> — with everything I know you love 💕
+        </p>
+        <a href="#story" class="hero-btn animate-slide-up delay-2">
+          <span>Discover Your Surprise</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse"><div class="wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section id="story" class="section story-section">
+      <div class="container">
+        <div class="section-label">💬 How It All Began</div>
+        <h2 class="section-title">Our <span class="gradient-text">Story</span></h2>
+        <div class="timeline">
+          <div class="timeline-item left reveal">
+            <div class="timeline-icon">🎮</div>
+            <div class="timeline-card">
+              <h3>We Met on WePlay</h3>
+              <p>Two strangers from different states — one from the beautiful land of Assam, one from the heart of Uttar Pradesh — found each other in a game, and the universe had a plan.</p>
+              <div class="timeline-tag">The Beginning</div>
+            </div>
+          </div>
+          <div class="timeline-item right reveal">
+            <div class="timeline-icon">💬</div>
+            <div class="timeline-card">
+              <h3>Conversations That Felt Like Home</h3>
+              <p>What started as gaming buddies turned into something so much deeper. Late night talks, endless laughs, and all those little moments that became our memories.</p>
+              <div class="timeline-tag">The Bond Grew</div>
+            </div>
+          </div>
+          <div class="timeline-item left reveal">
+            <div class="timeline-icon">🖤</div>
+            <div class="timeline-card">
+              <h3>Best Friends Forever</h3>
+              <p>Distance means nothing when two souls are connected. Assam to UP — different worlds, same wavelength. You became my best friend, and I wouldn't trade that for anything.</p>
+              <div class="timeline-tag">Today & Always</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THINGS YOU LOVE -->
+    <section id="loves" class="section loves-section">
+      <div class="container">
+        <div class="section-label">💖 Made Just For You</div>
+        <h2 class="section-title">Things That Make <span class="gradient-text">You, You</span></h2>
+        <div class="cards-grid">
+          <div class="love-card reveal" id="black-card">
+            <div class="card-glow black-glow"></div>
+            <div class="card-icon">🖤</div>
+            <div class="card-body">
+              <h3>Your Color — Black</h3>
+              <p>Black isn't just a color, it's a statement. It's mysterious, powerful, elegant — just like you. You wear it like a queen wears her crown.</p>
+              <div class="black-palette">
+                <span style="background:#000000"></span>
+                <span style="background:#1a1a1a"></span>
+                <span style="background:#2d2d2d"></span>
+                <span style="background:#404040"></span>
+                <span style="background:#666666"></span>
+              </div>
+              <p class="card-quote">"Black is not sad. Black is poetic." 🖤</p>
+            </div>
+          </div>
+          <div class="love-card reveal" id="momos-card">
+            <div class="card-glow momo-glow"></div>
+            <div class="card-icon momo-icon">🥟</div>
+            <div class="card-body">
+              <h3>Your Fav — Momos!</h3>
+              <p>Steaming hot, perfectly folded, dipped in that spicy chutney — momos aren't just food for you, they're a whole mood and an emotion.</p>
+              <div class="momo-row">
+                <span class="momo-emoji" style="animation-delay:0s">🥟</span>
+                <span class="momo-emoji" style="animation-delay:0.2s">🥟</span>
+                <span class="momo-emoji" style="animation-delay:0.4s">🥟</span>
+                <span class="momo-emoji" style="animation-delay:0.6s">🥟</span>
+                <span class="momo-emoji" style="animation-delay:0.8s">🥟</span>
+              </div>
+              <p class="card-quote">"Life is short, eat more momos!" 🥟</p>
+            </div>
+          </div>
+          <div class="love-card reveal" id="assam-card">
+            <div class="card-glow assam-glow"></div>
+            <div class="card-icon">🍵</div>
+            <div class="card-body">
+              <h3>Your Home — Assam</h3>
+              <p>The land of the mighty Brahmaputra, lush tea gardens, and one-horned rhinos. Assam is as beautiful and unique as you are.</p>
+              <div class="assam-facts">
+                <span>🌿 Tea Gardens</span>
+                <span>🦏 One-Horned Rhino</span>
+                <span>🌊 Brahmaputra</span>
+                <span>🎭 Bihu Dance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEDARNATH DREAM -->
+    <section id="kedarnath" class="section kedarnath-section">
+      <div class="kedarnath-overlay"></div>
+      <div class="container">
+        <div class="kedarnath-content reveal">
+          <div class="section-label light">⛰️ Your Dream Destination</div>
+          <h2 class="section-title light">
+            <span class="gradient-text-gold">Kedarnath</span> — <br/>Where Your Soul Wants to Go
+          </h2>
+          <p class="kedarnath-desc">
+            High up in the Himalayas, where the air is pure, the mountains touch the sky, and Lord Shiva's divine presence fills every breath — Kedarnath is calling your name. 🙏
+          </p>
+          <div class="kedarnath-cards">
+            <div class="k-card">
+              <div class="k-card-icon">🏔️</div>
+              <h4>3,583m Above Sea Level</h4>
+              <p>One of the highest Jyotirlingas in the world</p>
+            </div>
+            <div class="k-card">
+              <div class="k-card-icon">🙏</div>
+              <h4>Char Dham Yatra</h4>
+              <p>A journey that transforms the soul forever</p>
+            </div>
+            <div class="k-card">
+              <div class="k-card-icon">❄️</div>
+              <h4>Snow-Capped Majesty</h4>
+              <p>Mandakini river, glaciers & divine beauty</p>
+            </div>
+          </div>
+          <div class="kedarnath-promise reveal">
+            <div class="promise-card">
+              <div class="promise-icon">🌸</div>
+              <p class="promise-text">
+                "One day, may you stand before that magnificent temple, feel the cold mountain breeze, and know that every step of the journey was worth it. Har Har Mahadev! 🕉️"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRIENDSHIP MAP -->
+    <section id="friendship" class="section friendship-section">
+      <div class="container">
+        <div class="section-label">🗺️ Our World</div>
+        <h2 class="section-title">Two States, <span class="gradient-text">One Bond</span></h2>
+        <div class="map-container reveal">
+          <div class="map-visual">
+            <div class="state-bubbles">
+              <div class="state-bubble assam-bubble">
+                <div class="bubble-pulse"></div>
+                <div class="bubble-content">
+                  <span class="bubble-flag">🌿</span>
+                  <strong>Assam</strong>
+                  <span>Her World</span>
+                </div>
+              </div>
+              <div class="connection-line">
+                <div class="connection-dots">
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span class="heart-dot">🖤</span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="state-bubble up-bubble">
+                <div class="bubble-pulse"></div>
+                <div class="bubble-content">
+                  <span class="bubble-flag">🏛️</span>
+                  <strong>Uttar Pradesh</strong>
+                  <span>My World</span>
+                </div>
+              </div>
+            </div>
+            <div class="meeting-point">
+              <div class="meeting-icon">🎮</div>
+              <p>WePlay brought us together</p>
+              <span>Virtually Inseparable ∞</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASONS -->
+    <section id="reasons" class="section reasons-section">
+      <div class="container">
+        <div class="section-label">✨ From the Heart</div>
+        <h2 class="section-title">Why You're My <span class="gradient-text">Best Friend</span></h2>
+        <div class="reasons-grid">
+          <div class="reason-card reveal" style="--delay:0.1s">
+            <div class="reason-num">01</div>
+            <div class="reason-icon">😂</div>
+            <p>You make me laugh even on my worst days</p>
+          </div>
+          <div class="reason-card reveal" style="--delay:0.2s">
+            <div class="reason-num">02</div>
+            <div class="reason-icon">🎯</div>
+            <p>You always tell me the truth, no matter what</p>
+          </div>
+          <div class="reason-card reveal" style="--delay:0.3s">
+            <div class="reason-num">03</div>
+            <div class="reason-icon">🌙</div>
+            <p>Our late-night conversations feel like magic</p>
+          </div>
+          <div class="reason-card reveal" style="--delay:0.4s">
+            <div class="reason-num">04</div>
+            <div class="reason-icon">💪</div>
+            <p>You're stronger than you know and braver than you think</p>
+          </div>
+          <div class="reason-card reveal" style="--delay:0.5s">
+            <div class="reason-num">05</div>
+            <div class="reason-icon">🖤</div>
+            <p>You have a heart as deep and beautiful as the night sky</p>
+          </div>
+          <div class="reason-card reveal" style="--delay:0.6s">
+            <div class="reason-num">06</div>
+            <div class="reason-icon">🌟</div>
+            <p>Meeting you on WePlay was the best accident of my life</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL MESSAGE -->
+    <section id="message" class="section message-section">
+      <div class="container">
+        <div class="message-card reveal">
+          <div class="message-decoration top-left">🖤</div>
+          <div class="message-decoration top-right">🌸</div>
+          <div class="message-decoration bottom-left">⭐</div>
+          <div class="message-decoration bottom-right">🖤</div>
+          <div class="message-header">
+            <div class="envelope-icon">💌</div>
+            <h2>A Message From <span class="gradient-text">Your Best Friend</span></h2>
+          </div>
+          <div class="message-body">
+            <p class="letter-text">Hey bestie, 🖤</p>
+            <p class="letter-text">I made this entire page just for you — because you deserve to feel special every single day. From Assam to UP, we may be far apart, but you're always close in my heart.</p>
+            <p class="letter-text">I know you dream of visiting Kedarnath one day 🏔️, and I genuinely hope that day comes soon, because a soul as beautiful as yours deserves to experience the most divine places on Earth.</p>
+            <p class="letter-text">Thank you for being you. Thank you for the momos conversations 🥟, the gaming sessions on WePlay 🎮, and every little moment that has made our friendship something so rare and precious.</p>
+            <p class="letter-text signature">
+              With all my heart, <br/>
+              <span class="signer">Your Best Friend from UP 🖤</span>
+            </p>
+          </div>
+
+          <!-- Inline reply message box -->
+          <div class="friend-message-wrap">
+            <div class="friend-msg-header">
+              <img src="gifs/love (1).gif" class="friend-msg-gif" alt="heart" />
+              <label for="friend-custom-msg" class="friend-msg-label">💬 Reply with a sweet message... 🖤</label>
+            </div>
+            <textarea 
+              id="friend-custom-msg" 
+              class="friend-msg-input" 
+              placeholder="Or write a customized message to send with your love..." 
+              maxlength="500"
+            ></textarea>
+            <div id="friend-msg-error" class="friend-msg-error-text hidden">❌ Please write a sweet message first! 🖤</div>
+          </div>
+
+          <div class="confetti-btn-wrap">
+            <button id="confettiBtn" class="confetti-btn"><span>🎉 Send Love!</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-hearts">
+        <span>🖤</span><span>🌸</span><span>🏔️</span><span>🥟</span><span>🖤</span>
+      </div>
+      <p>Made with 🖤 from Uttar Pradesh, for my best friend in Assam</p>
+      <p class="footer-sub">We met on WePlay. We stayed for life. ♾️</p>
+      <a href="index.html" class="back-home">← Back to Home</a>
+    </footer>
+
+  </main>
+
+  <script src="shared-music.js"></script>
+  <script src="sheet-logger.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

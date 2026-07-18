@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>For Someone Special 🖤</title>
+  <meta name="description" content="A special surprise — choose your path" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+
+  <!-- PARTICLE CANVAS  Pihu🦋 ♡⚘ĸ𝔯і𝔰ʱu♡⚘-->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ══════════════════════════════
+       POPUP 1 — BIRTHDAY GATE
+  ══════════════════════════════ -->
+  <div id="birthday-overlay" class="popup-overlay active">
+    <div class="popup-box birthday-box">
+      <div class="popup-glow"></div>
+      <div class="popup-icon">🎂</div>
+      <h2 class="popup-title">Before You Enter</h2>
+      <p class="popup-sub">Prove you're the right person — enter your birthday 🖤</p>
+      <div class="bday-input-wrap">
+        <input
+          type="text"
+          id="bday-input"
+          class="bday-input"
+          placeholder="DD/MM/YYYY"
+          maxlength="10"
+          inputmode="numeric"
+          autocomplete="off"
+        />
+        <div id="bday-error" class="bday-error hidden">❌ Hmm, that's not right. Try again!</div>
+        <div id="bday-hint" class="bday-hint hidden">💡 Hint: It's a very special date in December 2005 😉</div>
+      </div>
+      <button id="bday-submit" class="popup-btn">
+        <span>Open My Surprise →</span>
+      </button>
+      <p class="bday-footer">Only the right person knows this 🖤</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       POPUP 2 — MUSIC SELECTOR
+  ══════════════════════════════ -->
+  <div id="music-overlay" class="popup-overlay">
+    <div class="popup-box music-box">
+      <div class="popup-glow music-popup-glow"></div>
+      <div class="popup-icon music-anim-icon">🎵</div>
+      <h2 class="popup-title">Pick Your Vibe</h2>
+      <p class="popup-sub">Choose a song that plays softly as you explore ✨</p>
+
+      <div class="music-select-wrap">
+        <div class="select-label">🎶 Select a Song</div>
+        <div class="custom-select-container">
+          <select id="music-dropdown" class="music-dropdown">
+            <option value="">— Choose a song —</option>
+            <option value="Music/Aarzu.mp3">🎵 Aarzu</option>
+            <option value="Music/Arz Kiya Hai Coke Studio Bharat.mp3">🎵 Arz Kiya Hai (Coke Studio Bharat)</option>
+            <option value="Music/Lo Maan Liya.mp3">🎵 Lo Maan Liya</option>
+            <option value="Music/Phir Bhi Tumko Chaahunga.mp3">🎵 Phir Bhi Tumko Chaahunga</option>
+            <option value="Music/Phir Mohabbat.mp3">🎵 Phir Mohabbat</option>
+            <option value="Music/Thodi Jagah (From Marjaavaan).mp3">🎵 Thodi Jagah (Marjaavaan)</option>
+          </select>
+          <div class="select-arrow">▾</div>
+        </div>
+
+        <!-- Mini now-playing preview -->
+        <div id="mini-player" class="mini-player hidden">
+          <div class="mini-eq">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span id="mini-song-name">—</span>
+        </div>
+      </div>
+
+      <div class="music-popup-actions">
+        <button id="music-confirm" class="popup-btn" disabled>
+          <span>Continue →</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       MAIN CHOICE SCREEN
+  ══════════════════════════════ -->
+  <div id="choice-screen" class="choice-screen hidden">
+    <div class="choice-inner">
+
+      <div class="choice-header">
+        <div class="choice-badge">💌 Something Special Awaits</div>
+        <h1 class="choice-title">This page was made<br/><span class="g-text">just for you</span></h1>
+        <p class="choice-sub">Who are you to the person who made this? 🤍</p>
+      </div>
+
+      <!-- PROPOSAL QUESTION BOX -->
+      <div class="proposal-wrap">
+        <h2 class="proposal-question">Do you love me? 🖤</h2>
+        
+        <div class="proposal-btns">
+          <button id="btn-love-yes" class="proposal-btn btn-yes">Yes, I do 💕</button>
+          <button id="btn-love-no" class="proposal-btn btn-no">No, just friends 🖤</button>
+        </div>
+
+        <!-- Hidden magical input container -->
+        <div id="proposal-magic-wrap" class="magic-input-wrap hidden">
+          <p class="magic-prompt">Prove it. Say the three magical words... ✨</p>
+          <div class="magic-field">
+            <input 
+              type="text" 
+              id="magic-input" 
+              class="magic-input" 
+              placeholder="Type them here..." 
+              autocomplete="off" 
+            />
+            <button id="magic-submit" class="magic-btn">Unlock →</button>
+          </div>
+          <div id="magic-error" class="magic-error hidden">❌ That's not the magical phrase! Try again 🤫</div>
+        </div>
+      </div>
+
+      <p class="choice-note" id="choice-note"></p>
+    </div>
+  </div>
+
+  <!-- FLOATING MUSIC WIDGET -->
+  <div id="music-widget" class="music-widget hidden">
+    <button id="music-toggle-btn" class="music-widget-btn" title="Play / Pause">
+      <div class="mw-eq">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <span id="mw-label">Music</span>
+    </button>
+  </div>
+
+  <!-- Hidden audio player -->
+  <audio id="bg-audio" loop></audio>
+
+  <script src="sheet-logger.js"></script>
+  <script src="landing.js"></script>
+</body>
+</html>

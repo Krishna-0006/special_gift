@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love 💕</title>
+  <meta name="description" content="A romantic surprise made from the heart — just for you 💕" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="love.css" />
+</head>
+<body>
+
+  <canvas id="love-canvas"></canvas>
+
+  <!-- Loading -->
+  <div id="love-loader">
+    <div class="love-loader-content">
+      <div class="love-loader-heart">💕</div>
+      <p class="love-loader-text">Opening your heart's surprise...</p>
+      <div class="love-loader-bar"><div class="love-loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main id="love-main" class="love-hidden">
+
+    <!-- ── HERO ── -->
+    <section class="lv-hero">
+      <div class="lv-hero-bg"></div>
+      <div class="floating-petals" aria-hidden="true">
+        <span>🌸</span><span>💕</span><span>🌹</span><span>✨</span>
+        <span>🌸</span><span>💗</span><span>🌺</span><span>💫</span>
+      </div>
+      <div class="lv-hero-content">
+        <div class="lv-badge animate-fade">
+          <img src="gifs/san-valentin.gif" class="badge-gif" alt="heart" />
+          <span>Made with Love for Pihu</span>
+        </div>
+        <h1 class="lv-hero-title animate-up">
+          For My Beautiful <br/><span class="rose-text">Pihu</span> 💕
+        </h1>
+        <p class="lv-hero-sub animate-up d1">
+          Every single word on this page was written just for you, Pihu — with feelings too big for words 💗
+        </p>
+        <a href="#lv-story" class="lv-hero-btn animate-up d2">
+          <span>Feel the Love</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+      </div>
+      <div class="lv-scroll-mouse">
+        <div class="lv-mouse"><div class="lv-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ── SCRAPBOOK DIARY (Replaces Timeline) ── -->
+    <section id="lv-story" class="lv-section lv-story-section">
+      <div class="lv-container">
+        <div class="journal-decor-wrap">
+          <h2 class="lv-title">A Story Written <span class="rose-text">Just For Us</span></h2>
+          <img src="gifs/love (1).gif" class="journal-title-gif" alt="cute heart animation" />
+        </div>
+
+        <!-- WePlay Connection Animation -->
+        <div class="weplay-connection-wrap lv-reveal">
+          <!-- Left Profile: Krishu -->
+          <div class="wp-profile-card left-card">
+            <div class="wp-avatar-glow"></div>
+            <div class="wp-avatar-frame">
+              <img src="Images/weplay_prof.webp" alt="Krishu's Profile" />
+            </div>
+            <span class="wp-username">♡⚘ĸ𝔯і𝔰ʱu♡⚘</span>
+            <span class="wp-role">UP Wala</span>
+          </div>
+
+          <!-- ECG Connection Line -->
+          <div class="wp-connection-line">
+            <svg viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Static background dashed connection path -->
+              <path d="M 0 40 L 80 40 L 95 20 L 110 60 L 125 40 L 140 40 L 150 40 L 160 40 L 175 20 L 190 60 L 205 40 L 220 40 L 300 40" 
+                    stroke="rgba(244, 63, 94, 0.15)" stroke-width="2.5" stroke-dasharray="4 4" />
+              
+              <!-- Animating ECG Line -->
+              <path id="heartbeat-path" d="M 0 40 L 80 40 L 95 20 L 110 60 L 125 40 L 140 40 L 150 40 L 160 40 L 175 20 L 190 60 L 205 40 L 220 40 L 300 40" 
+                    stroke="url(#heartbeat-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              
+              <!-- Moving Pulse Dot -->
+              <circle id="pulse-dot" r="4" fill="#fb7185" filter="url(#glow)" />
+              
+              <defs>
+                <linearGradient id="heartbeat-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.1" />
+                  <stop offset="50%" stop-color="#fb7185" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.1" />
+                </linearGradient>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+            <span class="center-heart">💕</span>
+          </div>
+
+          <!-- Right Profile: Pihu -->
+          <div class="wp-profile-card right-card">
+            <div class="wp-avatar-glow"></div>
+            <div class="wp-avatar-frame">
+              <img src="Images/weplay_prof (1).webp" alt="Pihu's Profile" />
+            </div>
+            <span class="wp-username">Pihu🦋</span>
+            <span class="wp-role">Assam Ki Queen</span>
+          </div>
+        </div>
+        
+        <div class="lv-journal-container">
+          <!-- Page 1 -->
+          <div class="lv-journal-page lv-reveal">
+            <div class="journal-page-bg bg-prof3"></div>
+            <div class="journal-page-content">
+              <div class="page-pin">📌</div>
+              <div class="page-date">Chapter 1 — The Game</div>
+              <h3>We Met on WePlay</h3>
+              <p>What are the odds? You from the beautiful hills of Assam, me from Uttar Pradesh. Two different worlds, one game lobby, and an unforgettable first hello that changed everything.</p>
+              <div class="page-heart">💖</div>
+            </div>
+          </div>
+          <!-- Page 2 -->
+          <div class="lv-journal-page lv-reveal">
+            <div class="journal-page-bg bg-prof4"></div>
+            <div class="journal-page-content">
+              <div class="page-pin">📌</div>
+              <div class="page-date">Chapter 2 — Midnight Conversations</div>
+              <h3>More Than Just Friends</h3>
+              <p>Endless laughter, late-night talks, sharing secrets we've never told anyone else. Somewhere in between those messages, you stopped being just a friend and became my favourite routine.</p>
+              <div class="page-heart">💖</div>
+            </div>
+          </div>
+          <!-- Page 3 -->
+          <div class="lv-journal-page lv-reveal">
+            <div class="journal-page-bg bg-prof3"></div>
+            <div class="journal-page-content">
+              <div class="page-pin">📌</div>
+              <div class="page-date">Chapter 3 — Today & Always</div>
+              <h3>You Became My World</h3>
+              <p>Now, you're the first thought when I wake up and the last voice I want to hear before sleeping. No matter the distance, Pihu, you hold my heart completely.</p>
+              <div class="page-heart">💖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── POLAROID GALLERY (Replaces Normal Cards) ── -->
+    <section class="lv-section lv-things-section">
+      <div class="lv-container">
+        <div class="lv-label">📸 Our Scrapbook</div>
+        <h2 class="lv-title">Things That Make Me <span class="rose-text">Fall For You</span></h2>
+
+        <div class="polaroid-gallery">
+          <!-- Polaroid 1 -->
+          <div class="polaroid-card lv-reveal polaroid-tilt-left">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-wrapper img-black">
+              <span class="polaroid-big-emoji">🖤</span>
+            </div>
+            <div class="polaroid-caption">
+              <h4>Your Favourite Colour</h4>
+              <p>You look absolutely stunning in Black. It matches your deep, mysterious, and beautiful soul perfectly.</p>
+            </div>
+          </div>
+          <!-- Polaroid 2 -->
+          <div class="polaroid-card lv-reveal polaroid-tilt-right">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-wrapper img-momo">
+              <span class="polaroid-big-emoji">🥟</span>
+            </div>
+            <div class="polaroid-caption">
+              <h4>Your Love for Momos</h4>
+              <p>Your eyes light up whenever you eat momos. I promise to take you out for the best momo dates ever!</p>
+            </div>
+          </div>
+          <!-- Polaroid 3 -->
+          <div class="polaroid-card lv-reveal polaroid-tilt-straight">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-wrapper img-assam">
+              <span class="polaroid-big-emoji">🌿</span>
+            </div>
+            <div class="polaroid-caption">
+              <h4>Assam — Your Home</h4>
+              <p>Endless tea gardens, beautiful Bihu culture, and the place that raised the girl who stole my heart.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PIHU'S GALLERY ── -->
+    <section id="lv-gallery" class="lv-section lv-gallery-section">
+      <div class="lv-container">
+        <div class="lv-label">✨ Gallery of My Queen</div>
+        <h2 class="lv-title">Capturing Your <span class="rose-text">Beautiful Moments</span></h2>
+        
+        <div class="love-gallery-grid">
+          <!-- Polaroid 1 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-1" data-index="0">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260717_194022_803.webp" alt="Pihu - Captivating Smile" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>Captivating Smile</h4>
+              <p>Your smile brightens my darkest days. 💖</p>
+            </div>
+          </div>
+          <!-- Polaroid 2 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-2" data-index="1">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260717_194140_245.webp" alt="Pihu - Pure Elegance" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>Pure Elegance</h4>
+              <p>You carry yourself with so much grace. ✨</p>
+            </div>
+          </div>
+          <!-- Polaroid 3 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-3" data-index="2">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260717_194144_463.webp" alt="Pihu - Beautiful Eyes" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>Those Beautiful Eyes</h4>
+              <p>I could look into your eyes forever. 👁️🖤</p>
+            </div>
+          </div>
+          <!-- Polaroid 4 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-4" data-index="3">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260717_194147_258.webp" alt="Pihu - Cute Moments" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>Cute Moments</h4>
+              <p>The cutest girl in the world! 🌸</p>
+            </div>
+          </div>
+          <!-- Polaroid 5 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-5" data-index="4">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260717_194151_064.webp" alt="Pihu - Simply Stunning" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>Simply Stunning</h4>
+              <p>Naturally gorgeous in every way. 💗</p>
+            </div>
+          </div>
+          <!-- Polaroid 6 -->
+          <div class="love-gallery-card lv-reveal gallery-tilt-6" data-index="5">
+            <div class="gallery-tape"></div>
+            <div class="gallery-img-wrap">
+              <img src="Images/IMG_20260718_021315.webp" alt="Pihu - My Heartbeat" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h4>My Heartbeat</h4>
+              <p>You hold my heart completely, Pihu. ♾️💕</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── KEDARNATH TOGETHER ── -->
+    <section class="lv-section lv-kedar-section">
+      <div class="lv-kedar-mountains" aria-hidden="true"></div>
+      <div class="lv-container">
+        <div class="lv-kedar-content lv-reveal">
+          <div class="lv-label light">⛰️ Our Dream Destination</div>
+          <h2 class="lv-title light">
+            <span class="gold-rose-text">Kedarnath</span> — <br/>I Want to Go There With <em>You</em>
+          </h2>
+          <p class="lv-kedar-desc">
+            You've always dreamed of Kedarnath — and so have I. Imagine us, side by side, walking up that sacred mountain, breathing in the cold Himalayan air, watching the temple glow at sunrise. Together. 🙏
+          </p>
+          <div class="lv-kedar-cards">
+            <div class="lv-k-card">
+              <div class="k-card-bg bg-mountains"></div>
+              <div class="k-card-content">
+                <div class="k-card-emoji">🏔️</div>
+                <h4>3,583m Above the World</h4>
+                <p>Above all worries, above all noise — just us and the mountains</p>
+              </div>
+            </div>
+            <div class="lv-k-card">
+              <div class="k-card-bg bg-shiva"></div>
+              <div class="k-card-content">
+                <div class="k-card-emoji">🕉️</div>
+                <h4>Lord Shiva's Blessing</h4>
+                <p>A sacred journey I want to make with Pihu by my side</p>
+              </div>
+            </div>
+            <div class="lv-k-card">
+              <div class="k-card-bg bg-river"></div>
+              <div class="k-card-content">
+                <div class="k-card-emoji">❄️</div>
+                <h4>Snow & Mandakini River</h4>
+                <p>Cold mountain air, warm hearts — a memory for a lifetime</p>
+              </div>
+            </div>
+          </div>
+          <div class="lv-kedar-promise lv-reveal">
+            <div class="lv-promise-box">
+              <div class="lv-promise-hearts">💕 🏔️ 💕</div>
+              <p class="lv-promise-text">
+                "I promise — one day we will stand together at Kedarnath, hold hands in that cold mountain breeze, and offer our prayers side by side. Har Har Mahadev. 🕉️"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PIHU'S INTERACTIVE LOVE JAR (Replaces grid) ── -->
+    <section class="lv-section lv-reasons-section">
+      <div class="lv-container">
+        <div class="lv-label">💖 Pihu's Love Jar</div>
+        <h2 class="lv-title">Click Envelopes to <span class="rose-text">Reveal Love Notes</span></h2>
+        
+        <div class="love-jar-container">
+          <!-- The Jar Visual -->
+          <div class="love-jar-visual lv-reveal">
+            <div class="jar-lid"></div>
+            <div class="jar-body">
+              <div class="jar-label">Pihu's Notes 🖤</div>
+              <div class="jar-floating-hearts">
+                <span>💕</span><span>🌸</span><span>✨</span><span>💖</span>
+              </div>
+            </div>
+            <div class="jar-base"></div>
+          </div>
+
+          <!-- Envelope Grid -->
+          <div class="love-envelopes-grid">
+            <div class="love-envelope lv-reveal" data-note="0" style="--d:0.1s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">Note for You<br><span class="env-small-msg">Open Me</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="1" style="--d:0.2s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">Just for You<br><span class="env-small-msg">Tap Here</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="2" style="--d:0.3s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">For My Girl<br><span class="env-small-msg">Click Me</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="3" style="--d:0.4s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">Pihu's Secret<br><span class="env-small-msg">For Pihu</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="4" style="--d:0.5s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">My Promise<br><span class="env-small-msg">Secret Note</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="5" style="--d:0.6s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">A Special Msg<br><span class="env-small-msg">Sweet Msg</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="6" style="--d:0.7s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">Read This<br><span class="env-small-msg">Read Me</span></span>
+              </div>
+            </div>
+            <div class="love-envelope lv-reveal" data-note="7" style="--d:0.8s">
+              <div class="envelope-top"></div>
+              <div class="envelope-body">
+                <div class="envelope-heart">💕</div>
+                <span class="envelope-num">And More...<br><span class="env-small-msg">Many More</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Video Envelope -->
+        <div class="special-video-section lv-reveal">
+          <div class="special-video-title">🎥 See A Surprise video</div>
+          <div class="love-envelope video-envelope" id="video-envelope">
+            <div class="envelope-top"></div>
+            <div class="envelope-body">
+              <div class="envelope-heart">🎥</div>
+              <span class="envelope-num">Surprise Video<br><span class="env-small-msg">Click to Play</span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal for showing Love Notes -->
+    <div id="love-note-modal" class="love-modal-overlay">
+      <div class="love-modal-box">
+        <div class="love-modal-close" id="close-modal">&times;</div>
+        <img src="gifs/love.gif" class="love-modal-gif" alt="Love Note Gif" />
+        <h3 id="modal-note-title">Love Note</h3>
+        <p id="modal-note-text">Romantic note content here...</p>
+        <div class="love-modal-hearts">💕💖💕</div>
+      </div>
+    </div>
+
+    <!-- Modal for showing Video -->
+    <div id="love-video-modal" class="love-modal-overlay">
+      <div class="love-modal-box video-modal-box">
+        <div class="love-modal-close" id="close-video-modal">&times;</div>
+        <img src="gifs/transparent-love.gif" class="love-modal-gif" alt="Heart Gif" />
+        <h3 id="video-modal-title">See A Surprise video 🖤</h3>
+        <div class="video-container">
+          <video id="love-video" controls width="100%" playsinline>
+            <source src="Videos/syncwithdoodle_14050424_225118193.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="love-modal-hearts">💕💖💕</div>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="love-lightbox-modal" class="love-lightbox-overlay">
+      <div class="lightbox-close" id="close-lightbox">&times;</div>
+      <div class="lightbox-container">
+        <button class="lightbox-nav-btn prev-btn" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        
+        <div class="lightbox-content-box">
+          <div class="lightbox-img-container">
+            <img id="lightbox-img" src="" alt="Pihu's Photo" />
+          </div>
+          <div class="lightbox-caption-panel">
+            <h3 id="lightbox-title">Photo Title</h3>
+            <p id="lightbox-desc">Photo description here...</p>
+            <div class="lightbox-actions">
+              <button id="lightbox-like-btn" class="lightbox-like-btn">
+                <span class="like-icon">❤️</span>
+                <span class="like-label">React with Love</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="lightbox-nav-btn next-btn" id="lightbox-next" aria-label="Next image">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- ── LOVE LETTER ── -->
+    <section class="lv-section lv-letter-section">
+      <div class="lv-container">
+        <div class="lv-letter-card lv-reveal">
+          <div class="lv-letter-ribbon"></div>
+          <div class="lv-letter-deco tl">💕</div>
+          <div class="lv-letter-deco tr">🌹</div>
+          <div class="lv-letter-deco bl">✨</div>
+          <div class="lv-letter-deco br">💕</div>
+
+          <div class="lv-letter-header">
+            <div class="lv-letter-icon">💌</div>
+            <h2>A Letter <span class="rose-text">From My Heart</span></h2>
+          </div>
+
+          <div class="lv-letter-body">
+            <p class="lv-letter-p opening">My love,💕</p>
+            <p class="lv-letter-p">I don't know how to put this into words, but I'm trying. You walked into my life through a phone screen and a game called WePlay — and somehow, you rewrote everything I thought I knew about connection and distance.</p>
+            <p class="lv-letter-p">From Assam to UP, we are separated by so many kilometres — but every time we talk, every laugh we share, every moment we create together makes that distance feel like nothing at all.</p>
+            <p class="lv-letter-p">I think about Kedarnath — your dream — and I make a quiet promise to myself every time: that I'll be the one standing beside you when you finally get there. We'll walk those mountain paths together, we'll pray together, and we'll make memories that neither of us will ever forget.</p>
+            <p class="lv-letter-p">You love black. You love momos. You love Assam. And I love every single thing about you — especially all the things you don't even know make you amazing.</p>
+            <p class="lv-letter-p">This page is small, and my love for you is not. But I hope when you read this, you feel exactly how much you mean to me.</p>
+            <p class="lv-letter-p signature">
+              Yours, completely — <br/>
+              <span class="lv-signer">Your UP Wala🖤💕</span>
+            </p>
+          </div>
+
+          <!-- Inline reply message box -->
+          <div class="lv-love-message-wrap">
+            <div class="msg-box-header">
+              <img src="gifs/love (1).gif" class="msg-box-gif" alt="heart gif" />
+              <label for="love-custom-msg" class="love-msg-label">💬 Reply with a sweet note... 🖤</label>
+            </div>
+            <textarea 
+              id="love-custom-msg" 
+              class="love-msg-input" 
+              placeholder="Or write a custom message to send with your love..." 
+              maxlength="500"
+            ></textarea>
+            <div id="love-msg-error" class="love-msg-error-text hidden">❌ Please write a little message first! 🖤</div>
+          </div>
+
+          <div class="lv-love-btn-wrap">
+            <button id="loveBurstBtn" class="lv-love-btn">
+              💕 Send My Love!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="lv-footer">
+      <div class="lv-footer-icons">
+        <span>💕</span><span>🌹</span><span>🏔️</span><span>🥟</span><span>🖤</span><span>✨</span>
+      </div>
+      <p>Made with 💕 By ♡⚘ĸ𝔯і𝔰ʱu♡⚘— For Pihu🦋</p>
+      <p class="lv-footer-sub">Sorry Mujhe Nahi Pta Tha Aapke Boyfriend Hai Warna Nahi Banate Ye Page♾️</p>
+      <a href="index.html" class="lv-back-home">← Back to Start</a>
+    </footer>
+
+  </main>
+
+  <script src="shared-music.js"></script>
+  <script src="sheet-logger.js"></script>
+  <script src="love.js"></script>
+</body>
+</html>
