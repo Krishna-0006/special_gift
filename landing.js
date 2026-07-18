@@ -285,3 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check the initial state on load
   handleNavigationState();
 });
+
+// Reset body opacity in case page is restored from back-forward cache (bfcache)
+window.addEventListener('pageshow', (event) => {
+  document.body.style.opacity = '1';
+});
